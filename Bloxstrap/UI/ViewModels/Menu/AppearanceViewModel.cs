@@ -7,9 +7,9 @@ using CommunityToolkit.Mvvm.Input;
 
 using Microsoft.Win32;
 
-using Bloxstrap.UI.Elements.Menu;
+using Roforge.UI.Elements.Menu;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class AppearanceViewModel : NotifyPropertyChangedViewModel
     {
@@ -85,7 +85,7 @@ namespace Bloxstrap.UI.ViewModels.Menu
 
         public IReadOnlyDictionary<string, BootstrapperIcon> Icons { get; set; } = new Dictionary<string, BootstrapperIcon>()
         {
-            { "Bloxstrap", BootstrapperIcon.IconBloxstrap },
+            { "Roforge", BootstrapperIcon.IconRoforge },
             { "2022", BootstrapperIcon.Icon2022 },
             { "2019", BootstrapperIcon.Icon2019 },
             { "2017", BootstrapperIcon.Icon2017 },

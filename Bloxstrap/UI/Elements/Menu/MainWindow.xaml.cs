@@ -5,9 +5,9 @@ using Wpf.Ui.Controls.Interfaces;
 using Wpf.Ui.Mvvm.Contracts;
 using Wpf.Ui.Mvvm.Services;
 
-using Bloxstrap.UI.ViewModels.Menu;
+using Roforge.UI.ViewModels.Menu;
 
-namespace Bloxstrap.UI.Elements.Menu
+namespace Roforge.UI.Elements.Menu
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml

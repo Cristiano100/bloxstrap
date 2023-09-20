@@ -6,15 +6,15 @@ using System.Windows.Threading;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-namespace Bloxstrap
+namespace Roforge
 {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
     public partial class App : Application
     {
-        public const string ProjectName = "Bloxstrap";
-        public const string ProjectRepository = "pizzaboxer/bloxstrap";
+        public const string ProjectName = "Roforge";
+        public const string ProjectRepository = "Cristiano100/roforge";
         public const string RobloxAppName = "RobloxPlayerBeta";
 
         // used only for communicating between app and menu - use Directories.Base for anything else
@@ -152,7 +152,7 @@ namespace Bloxstrap
 
                 if (Array.IndexOf(LaunchArgs, "-upgrade") != -1)
                 {
-                    Logger.WriteLine(LOG_IDENT, "Bloxstrap started with IsUpgrade flag");
+                    Logger.WriteLine(LOG_IDENT, "Roforge started with IsUpgrade flag");
                     IsUpgrade = true;
                 }
             }

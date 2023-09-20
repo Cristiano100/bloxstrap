@@ -4,10 +4,10 @@ using System.Windows.Forms;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 
-using Bloxstrap.UI.Elements.Bootstrapper.Base;
-using Bloxstrap.UI.ViewModels.Bootstrapper;
+using Roforge.UI.Elements.Bootstrapper.Base;
+using Roforge.UI.ViewModels.Bootstrapper;
 
-namespace Bloxstrap.UI.Elements.Bootstrapper
+namespace Roforge.UI.Elements.Bootstrapper
 {
     /// <summary>
     /// Interaction logic for ByfronDialog.xaml
@@ -16,7 +16,7 @@ namespace Bloxstrap.UI.Elements.Bootstrapper
     {
         private readonly ByfronDialogViewModel _viewModel;
 
-        public Bloxstrap.Bootstrapper? Bootstrapper { get; set; }
+        public Roforge.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

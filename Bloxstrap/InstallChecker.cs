@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using Microsoft.Win32;
 
-namespace Bloxstrap
+namespace Roforge
 {
     internal class InstallChecker : IDisposable
     {
@@ -52,7 +52,7 @@ namespace Bloxstrap
                 _registryKey.SetValue("InstallLocation", _installLocation);
             }
 
-            // check if drive that bloxstrap was installed to was removed from system, or had its drive letter changed
+            // check if drive that Roforge was installed to was removed from system, or had its drive letter changed
 
             if (!Directory.Exists(_installLocation))
             {

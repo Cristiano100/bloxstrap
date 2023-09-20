@@ -1,6 +1,6 @@
-﻿using Bloxstrap.UI.ViewModels.Menu;
+﻿using Roforge.UI.ViewModels.Menu;
 
-namespace Bloxstrap.UI.Elements.Menu.Pages
+namespace Roforge.UI.Elements.Menu.Pages
 {
     /// <summary>
     /// Interaction logic for AboutPage.xaml

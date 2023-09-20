@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap
+﻿namespace Roforge
 {
     internal class HttpClientLoggingHandler : MessageProcessingHandler
     {

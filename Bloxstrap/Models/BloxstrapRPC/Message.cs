@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.BloxstrapRPC;
+﻿namespace Roforge.Models.RoforgeRPC;
 
 public class Message
 {

@@ -3,7 +3,7 @@
 using Windows.Win32;
 using Windows.Win32.Graphics.Gdi;
 
-namespace Bloxstrap
+namespace Roforge
 {
     public class FastFlagManager : JsonManager<Dictionary<string, object>>
     {

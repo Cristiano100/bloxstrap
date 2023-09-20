@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Bloxstrap.Utility
+namespace Roforge.Utility
 {
     internal static class Shortcut
     {

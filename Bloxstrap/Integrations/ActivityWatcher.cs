@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Integrations
+﻿namespace Roforge.Integrations
 {
     public class ActivityWatcher : IDisposable
     {
@@ -11,7 +11,7 @@
         private const string GameJoinedEntry = "[FLog::Network] serverId:";
         private const string GameDisconnectedEntry = "[FLog::Network] Time to disconnect replication data:";
         private const string GameTeleportingEntry = "[FLog::SingleSurfaceApp] initiateTeleport";
-        private const string GameMessageEntry = "[FLog::Output] [BloxstrapRPC]";
+        private const string GameMessageEntry = "[FLog::Output] [RoforgeRPC]";
 
         private const string GameJoiningEntryPattern = @"! Joining game '([0-9a-f\-]{36})' place ([0-9]+) at ([0-9\.]+)";
         private const string GameJoiningUDMUXPattern = @"UDMUX Address = ([0-9\.]+), Port = [0-9]+ \| RCC Server Address = ([0-9\.]+), Port = [0-9]+";

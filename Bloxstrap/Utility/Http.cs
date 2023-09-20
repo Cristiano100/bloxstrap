@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Utility
+﻿namespace Roforge.Utility
 {
     internal static class Http
     {

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Enums
+﻿namespace Roforge.Enums
 {
     public enum BootstrapperStyle
     {

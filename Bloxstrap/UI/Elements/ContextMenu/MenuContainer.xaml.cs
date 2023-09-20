@@ -10,9 +10,9 @@ using Windows.Win32;
 using Windows.Win32.Foundation;
 using Windows.Win32.UI.WindowsAndMessaging;
 
-using Bloxstrap.Integrations;
+using Roforge.Integrations;
 
-namespace Bloxstrap.UI.Elements.ContextMenu
+namespace Roforge.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for NotifyIconMenu.xaml

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 
-namespace Bloxstrap
+namespace Roforge
 {
     public class JsonManager<T> where T : new()
     {

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.RobloxApi
+﻿namespace Roforge.Models.RobloxApi
 {
     // lmao its just one property
     public class UniverseIdResponse

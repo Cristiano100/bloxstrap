@@ -5,7 +5,7 @@ using Microsoft.Win32;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class ModsViewModel : NotifyPropertyChangedViewModel
     {

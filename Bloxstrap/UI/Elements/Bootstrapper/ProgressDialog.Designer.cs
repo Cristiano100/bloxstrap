@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Bloxstrap.UI.Elements.Bootstrapper
+namespace Roforge.UI.Elements.Bootstrapper
 {
     partial class ProgressDialog
     {

@@ -3,9 +3,9 @@ using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 
-using Bloxstrap.Integrations;
+using Roforge.Integrations;
 
-namespace Bloxstrap.UI.ViewModels.ContextMenu
+namespace Roforge.UI.ViewModels.ContextMenu
 {
     internal class LogTracerViewModel : NotifyPropertyChangedViewModel
     {

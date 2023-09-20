@@ -4,7 +4,7 @@
  * Copyright (c) 2015-present MaximumADHD
 */
 
-namespace Bloxstrap.Utility
+namespace Roforge.Utility
 {
     public class SystemEvent : EventWaitHandle
     {

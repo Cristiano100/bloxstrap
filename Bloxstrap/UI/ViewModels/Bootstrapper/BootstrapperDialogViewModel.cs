@@ -4,7 +4,7 @@ using System.Windows.Media;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Bloxstrap.UI.ViewModels.Bootstrapper
+namespace Roforge.UI.ViewModels.Bootstrapper
 {
     public class BootstrapperDialogViewModel : NotifyPropertyChangedViewModel
     {

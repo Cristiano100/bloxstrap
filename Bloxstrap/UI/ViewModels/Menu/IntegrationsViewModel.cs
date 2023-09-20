@@ -3,7 +3,7 @@ using System.Windows.Input;
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class IntegrationsViewModel : NotifyPropertyChangedViewModel
     {

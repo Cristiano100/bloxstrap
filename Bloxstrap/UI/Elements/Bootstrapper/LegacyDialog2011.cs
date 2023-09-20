@@ -1,8 +1,8 @@
 using System.Windows.Forms;
 
-using Bloxstrap.UI.Elements.Bootstrapper.Base;
+using Roforge.UI.Elements.Bootstrapper.Base;
 
-namespace Bloxstrap.UI.Elements.Bootstrapper
+namespace Roforge.UI.Elements.Bootstrapper
 {
     // https://youtu.be/3K9oCEMHj2s?t=35
 

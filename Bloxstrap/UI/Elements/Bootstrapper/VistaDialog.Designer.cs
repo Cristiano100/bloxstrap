@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.UI.Elements.Bootstrapper
+﻿namespace Roforge.UI.Elements.Bootstrapper
 {
     partial class VistaDialog
     {

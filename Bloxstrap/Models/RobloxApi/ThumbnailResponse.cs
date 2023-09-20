@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.RobloxApi
+﻿namespace Roforge.Models.RobloxApi
 {
     /// <summary>
     /// Roblox.Web.Responses.Thumbnails.ThumbnailResponse

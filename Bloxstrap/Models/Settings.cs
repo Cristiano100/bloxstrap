@@ -1,12 +1,12 @@
 ﻿using System.Collections.ObjectModel;
 
-namespace Bloxstrap.Models
+namespace Roforge.Models
 {
     public class Settings
     {
-        // bloxstrap configuration
+        // Roforge configuration
         public BootstrapperStyle BootstrapperStyle { get; set; } = BootstrapperStyle.FluentDialog;
-        public BootstrapperIcon BootstrapperIcon { get; set; } = BootstrapperIcon.IconBloxstrap;
+        public BootstrapperIcon BootstrapperIcon { get; set; } = BootstrapperIcon.IconRoforge;
         public string BootstrapperTitle { get; set; } = App.ProjectName;
         public string BootstrapperIconCustomLocation { get; set; } = "";
         public Theme Theme { get; set; } = Theme.Default;

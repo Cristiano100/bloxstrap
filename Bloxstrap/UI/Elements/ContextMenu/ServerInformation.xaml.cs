@@ -12,10 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-using Bloxstrap.Integrations;
-using Bloxstrap.UI.ViewModels.ContextMenu;
+using Roforge.Integrations;
+using Roforge.UI.ViewModels.ContextMenu;
 
-namespace Bloxstrap.UI.Elements.ContextMenu
+namespace Roforge.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for ServerInformation.xaml

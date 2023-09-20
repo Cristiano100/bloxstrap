@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Input;
-using Bloxstrap.Integrations;
+using Roforge.Integrations;
 using CommunityToolkit.Mvvm.Input;
 
-namespace Bloxstrap.UI.ViewModels.ContextMenu
+namespace Roforge.UI.ViewModels.ContextMenu
 {
     internal class ServerInformationViewModel : NotifyPropertyChangedViewModel
     {

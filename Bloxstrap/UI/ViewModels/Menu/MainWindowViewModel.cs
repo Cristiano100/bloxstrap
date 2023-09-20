@@ -7,9 +7,9 @@ using CommunityToolkit.Mvvm.Input;
 
 using Wpf.Ui.Mvvm.Contracts;
 
-using Bloxstrap.UI.Elements.Menu.Pages;
+using Roforge.UI.Elements.Menu.Pages;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class MainWindowViewModel : NotifyPropertyChangedViewModel
     {

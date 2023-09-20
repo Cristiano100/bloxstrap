@@ -7,10 +7,10 @@ using Microsoft.Win32;
 
 using Wpf.Ui.Mvvm.Contracts;
 
-using Bloxstrap.UI.Elements.Dialogs;
+using Roforge.UI.Elements.Dialogs;
 using System.Xml.Linq;
 
-namespace Bloxstrap.UI.Elements.Menu.Pages
+namespace Roforge.UI.Elements.Menu.Pages
 {
     /// <summary>
     /// Interaction logic for FastFlagEditorPage.xaml
@@ -27,6 +27,7 @@ namespace Bloxstrap.UI.Elements.Menu.Pages
         public FastFlagEditorPage()
         {
             InitializeComponent();
+            DataGrid.Columns[0].Visibility = System.Windows.Visibility.Hidden;
         }
 
         private void ReloadList()
@@ -47,16 +48,13 @@ namespace Bloxstrap.UI.Elements.Menu.Pages
 
                 var entry = new FastFlag
                 {
-                    // Enabled = true,
                     Name = pair.Key,
-                    Value = pair.Value.ToString()!
+                    Value = pair.Value.ToString()!,
                 };
 
-                /* if (entry.Name.StartsWith("Disable"))
-                {
-                    entry.Enabled = false;
-                    entry.Name = entry.Name[7..];
-                } */
+                if (presetFlags.Contains(pair.Key)) {
+                    entry.Preset = "pack://application:,,,/Roforge.ico";
+                }
 
                 _fastFlagList.Add(entry);
             }
@@ -95,21 +93,6 @@ namespace Bloxstrap.UI.Elements.Menu.Pages
 
             switch (e.Column.Header)
             {
-                /* case "Enabled":
-                    bool enabled = (bool)((CheckBox)e.EditingElement).IsChecked!;
-
-                    if (enabled)
-                    {
-                        App.FastFlags.SetValue(entry.Name, entry.Value);
-                        App.FastFlags.SetValue($"Disable{entry.Name}", null);
-                    }
-                    else
-                    {
-                        App.FastFlags.SetValue(entry.Name, null);
-                        App.FastFlags.SetValue($"Disable{entry.Name}", entry.Value);
-                    }
-
-                    break; */
 
                 case "Name":
                     var textbox = e.EditingElement as TextBox;
@@ -222,15 +205,42 @@ namespace Bloxstrap.UI.Elements.Menu.Pages
             }
         }
 
+        
+
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
             if (sender is not ToggleButton button)
                 return;
 
+            //Only show the preset column if the button is checked
+            DataGrid.Columns[0].Visibility = button.IsChecked ?? false ? Visibility.Visible : Visibility.Collapsed;
+
+
             _showPresets = button.IsChecked ?? false;
             ReloadList();
         }
 
+        private async void ExportJSONButton_Click(object sender, RoutedEventArgs e)
+        {
+            Dictionary<string, object> propCopy = new Dictionary<string, object>(App.FastFlags.Prop);
+
+            foreach (var pair in propCopy)
+                propCopy[pair.Key] = pair.Value.ToString()!;
+
+            string flagsJson = JsonSerializer.Serialize(propCopy, new JsonSerializerOptions { WriteIndented = true });
+
+            var dialog = new SaveFileDialog
+            {
+                Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+                FileName = "FastFlags.json"
+            };
+
+            if (dialog.ShowDialog() == true)
+                await File.WriteAllTextAsync(dialog.FileName, flagsJson);
+
+
+
+        }
         private void ImportJSONButton_Click(object sender, RoutedEventArgs e)
         {
             string json = "";

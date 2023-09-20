@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Models.Manifest
+﻿namespace Roforge.Models.Manifest
 {
     public class ManifestFile
     {

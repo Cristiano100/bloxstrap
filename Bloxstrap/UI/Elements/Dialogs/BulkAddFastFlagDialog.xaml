@@ -1,10 +1,10 @@
-﻿<ui:UiWindow x:Class="Bloxstrap.UI.Elements.Dialogs.BulkAddFastFlagDialog"
+﻿<ui:UiWindow x:Class="Roforge.UI.Elements.Dialogs.BulkAddFastFlagDialog"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-        xmlns:local="clr-namespace:Bloxstrap.UI.Elements.Dialogs"
+        xmlns:local="clr-namespace:Roforge.UI.Elements.Dialogs"
         mc:Ignorable="d"
         Title="Import JSON" 
         MinHeight="0"
@@ -40,21 +40,28 @@
             </TextBlock>
         </Grid>
 
+        
         <Border Grid.Row="3" Margin="0,10,0,0" Padding="15" Background="{ui:ThemeResource SolidBackgroundFillColorSecondaryBrush}">
-            <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" HorizontalAlignment="Right">
-                <Button MinWidth="100" Content="OK" Click="OKButton_Click">
-                    <Button.Style>
-                        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding ElementName=JsonTextBox, Path=Text.Length}" Value="0">
-                                    <Setter Property="IsEnabled" Value="False" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
-                <Button MinWidth="100" Margin="12,0,0,0" Content="Cancel" IsCancel="True" />
-            </StackPanel>
+            <Grid>
+                <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" HorizontalAlignment="Left" Width="212">
+                    <Button MinWidth="100" Content="Open File" Click="OpenFileButton_Click" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" FlowDirection="LeftToRight" HorizontalAlignment="Right" Width="212">
+                    <Button MinWidth="100" Content="OK" Click="OKButton_Click">
+                        <Button.Style>
+                            <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding ElementName=JsonTextBox, Path=Text.Length}" Value="0">
+                                        <Setter Property="IsEnabled" Value="False" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                    <Button MinWidth="100" Margin="12,0,0,0" Content="Cancel" IsCancel="True" />
+                </StackPanel>
+            </Grid>
         </Border>
+        
     </Grid>
 </ui:UiWindow>

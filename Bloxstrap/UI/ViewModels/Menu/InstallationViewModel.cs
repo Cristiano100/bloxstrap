@@ -2,7 +2,7 @@
 
 using CommunityToolkit.Mvvm.Input;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class InstallationViewModel : NotifyPropertyChangedViewModel
     {
@@ -11,6 +11,7 @@ namespace Bloxstrap.UI.ViewModels.Menu
         public ICommand BrowseInstallLocationCommand => new RelayCommand(BrowseInstallLocation);
         public ICommand ResetInstallLocationCommand => new RelayCommand(ResetInstallLocation);
         public ICommand OpenFolderCommand => new RelayCommand(OpenFolder);
+        public ICommand UninstallCommand => new RelayCommand(Uninstall);
 
         private void BrowseInstallLocation()
         {
@@ -38,6 +39,11 @@ namespace Bloxstrap.UI.ViewModels.Menu
         {
             get => App.BaseDirectory;
             set => App.BaseDirectory = value;
+        }
+
+        private static void Uninstall()
+        {
+            Utilities.ShellExecute("appwiz.cpl");
         }
     }
 }

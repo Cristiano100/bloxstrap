@@ -1,4 +1,4 @@
-﻿<ui:UiPage x:Class="Bloxstrap.UI.Elements.Menu.Pages.AppearancePage"
+﻿<ui:UiPage x:Class="Roforge.UI.Elements.Menu.Pages.AppearancePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -9,9 +9,9 @@
       Title="AppearancePage"
       Scrollable="True">
   <StackPanel Margin="0,0,14,14">
-    <TextBlock Text="Configure how Bloxstrap should look." FontSize="14" Foreground="{DynamicResource TextFillColorSecondaryBrush}" />
+        <TextBlock FontSize="14" Foreground="{DynamicResource TextFillColorSecondaryBrush}" ><Run Text="Configure how "/><Run Language="en-ca" Text="Roforge"/><Run Text=" should look."/></TextBlock>
 
-    <ui:CardControl Margin="0,16,0,0">
+        <ui:CardControl Margin="0,16,0,0">
       <ui:CardControl.Header>
         <StackPanel>
           <TextBlock FontSize="14" Text="Theme" />

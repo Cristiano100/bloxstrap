@@ -9,7 +9,7 @@ using Wpf.Ui.Controls;
 using Wpf.Ui.Mvvm.Contracts;
 using Wpf.Ui.Mvvm.Services;
 
-namespace Bloxstrap.UI.Elements.Base
+namespace Roforge.UI.Elements.Base
 {
     public class WpfUiWindow : UiWindow
     {

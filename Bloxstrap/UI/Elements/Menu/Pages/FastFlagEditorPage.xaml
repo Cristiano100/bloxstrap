@@ -1,12 +1,12 @@
-﻿<ui:UiPage x:Class="Bloxstrap.UI.Elements.Menu.Pages.FastFlagEditorPage"
+﻿<ui:UiPage x:Class="Roforge.UI.Elements.Menu.Pages.FastFlagEditorPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-      xmlns:local="clr-namespace:Bloxstrap.UI.Elements.Menu.Pages"
+      xmlns:local="clr-namespace:Roforge.UI.Elements.Menu.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="900"
       Title="FastFlagEditorPage"
       Loaded="Page_Loaded">
     <Grid Margin="0,0,14,14">
@@ -35,11 +35,13 @@
             </ui:Button>
             <ToggleButton x:Name="TogglePresetsButton" Content="Show preset flags" Click="ToggleButton_Click" Margin="12,0,0,0" />
             <ui:Button Icon="ArrowImport24" Content="Import JSON" Margin="12,0,0,0" Click="ImportJSONButton_Click" />
+            <ui:Button Icon="ArrowExportUp24" Content="Export JSON" Margin="12,0,0,0" Click="ExportJSONButton_Click" />
         </StackPanel>
 
         <ui:TextBox x:Name="SearchTextBox" Grid.Row="2" Margin="0,0,0,16" Icon="Search32" PlaceholderText="Search" TextChanged="SearchTextBox_TextChanged" />
+        
 
-        <DataGrid Name="DataGrid" Grid.Row="3" HeadersVisibility="Column" GridLinesVisibility="Horizontal" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CellEditEnding="DataGrid_CellEditEnding">
+        <DataGrid Name="DataGrid" Grid.Row="3" HeadersVisibility="Column" GridLinesVisibility="Horizontal" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" CellEditEnding="DataGrid_CellEditEnding" >
             <DataGrid.Style>
                 <Style TargetType="DataGrid" BasedOn="{StaticResource {x:Type DataGrid}}">
                     <Setter Property="Background" Value="Transparent" />
@@ -87,6 +89,14 @@
             </DataGrid.CellStyle>
             
             <DataGrid.Columns>
+                <!--* Image -->
+                <DataGridTemplateColumn Header="Preset" x:Name="PresetColumn">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Image Height="50" Width="25" Source="{Binding Preset}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
                 <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
                 <DataGridTextColumn Header="Value" Binding="{Binding Value}" Width="*" />
             </DataGrid.Columns>

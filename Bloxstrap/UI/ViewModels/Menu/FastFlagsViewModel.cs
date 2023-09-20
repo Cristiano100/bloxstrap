@@ -6,9 +6,9 @@ using Wpf.Ui.Mvvm.Contracts;
 
 using CommunityToolkit.Mvvm.Input;
 
-using Bloxstrap.UI.Elements.Menu.Pages;
+using Roforge.UI.Elements.Menu.Pages;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class FastFlagsViewModel : NotifyPropertyChangedViewModel
     {
@@ -158,7 +158,15 @@ namespace Bloxstrap.UI.ViewModels.Menu
 
         public string SelectedTextureQuality
         {
-            get => TextureQualities.FirstOrDefault(x => x.Value == App.FastFlags.GetPreset("Rendering.TextureLevel.Quality")).Key;
+
+            get
+            {
+                if (App.FastFlags.GetPreset("Rendering.TextureLevel.Quality") is null)
+                    return TextureQualities.First().Key;
+
+                return TextureQualities.FirstOrDefault(x => x.Value == App.FastFlags.GetPreset("Rendering.TextureLevel.Quality")).Key;
+            }
+            
             set
             {
                 App.FastFlags.SetPreset("Rendering.TextureLevel.Quality", TextureQualities[value]);

@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Bloxstrap.UI.Elements.Dialogs
+namespace Roforge.UI.Elements.Dialogs
 {
     /// <summary>
     /// Interaction logic for AddFlagDialog.xaml

@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.Enums
+﻿namespace Roforge.Enums
 {
     enum AssemblyLoadStatus
     {

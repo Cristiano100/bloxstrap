@@ -1,8 +1,8 @@
-﻿namespace Bloxstrap.Enums
+﻿namespace Roforge.Enums
 {
     public enum BootstrapperIcon
     {
-        IconBloxstrap,
+        IconRoforge,
         Icon2008,
         Icon2011,
         IconEarly2015,

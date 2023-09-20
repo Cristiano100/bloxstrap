@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 
-using Bloxstrap.UI.Elements.Bootstrapper;
-using Bloxstrap.UI.Elements.Dialogs;
-using Bloxstrap.UI.Elements.Menu;
+using Roforge.UI.Elements.Bootstrapper;
+using Roforge.UI.Elements.Dialogs;
+using Roforge.UI.Elements.Menu;
 
-namespace Bloxstrap.UI
+namespace Roforge.UI
 {
     static class Controls
     {

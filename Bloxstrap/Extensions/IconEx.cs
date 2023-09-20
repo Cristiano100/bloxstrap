@@ -2,7 +2,7 @@
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 
-namespace Bloxstrap.Extensions
+namespace Roforge.Extensions
 {
     public static class IconEx
     {

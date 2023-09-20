@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 
-using Bloxstrap.Integrations;
-using Bloxstrap.UI.Elements.ContextMenu;
+using Roforge.Integrations;
+using Roforge.UI.Elements.ContextMenu;
 
-namespace Bloxstrap.UI
+namespace Roforge.UI
 {
     public class NotifyIconWrapper : IDisposable
     {
@@ -25,7 +25,7 @@ namespace Bloxstrap.UI
 
             _notifyIcon = new()
             {
-                Icon = Properties.Resources.IconBloxstrap,
+                Icon = Properties.Resources.IconRoforge,
                 Text = App.ProjectName,
                 Visible = true
             };

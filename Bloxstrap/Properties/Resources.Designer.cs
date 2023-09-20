@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Bloxstrap.Properties {
+namespace Roforge.Properties {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Bloxstrap.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Bloxstrap.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Roforge.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -103,11 +103,11 @@ namespace Bloxstrap.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
-        internal static System.Drawing.Icon IconBloxstrap
+        internal static System.Drawing.Icon IconRoforge
         {
             get
             {
-                object obj = ResourceManager.GetObject("IconBloxstrap", resourceCulture);
+                object obj = ResourceManager.GetObject("IconRoforge", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

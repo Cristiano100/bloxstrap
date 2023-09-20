@@ -5,7 +5,7 @@ using System.Windows.Interop;
 using Windows.Win32;
 using Windows.Win32.Foundation;
 
-namespace Bloxstrap.UI.Elements.Dialogs
+namespace Roforge.UI.Elements.Dialogs
 {
     // hmm... do i use MVVM for this?
     // this is entirely static, so i think im fine without it, and this way is just so much more efficient

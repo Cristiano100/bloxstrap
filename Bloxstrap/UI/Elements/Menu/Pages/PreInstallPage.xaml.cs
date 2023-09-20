@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap.UI.Elements.Menu.Pages
+﻿namespace Roforge.UI.Elements.Menu.Pages
 {
     /// <summary>
     /// Interaction logic for PreInstallPage.xaml

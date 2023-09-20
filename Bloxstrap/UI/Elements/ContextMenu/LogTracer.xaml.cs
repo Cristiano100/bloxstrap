@@ -1,10 +1,10 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-using Bloxstrap.Integrations;
-using Bloxstrap.UI.ViewModels.ContextMenu;
+using Roforge.Integrations;
+using Roforge.UI.ViewModels.ContextMenu;
 
-namespace Bloxstrap.UI.Elements.ContextMenu
+namespace Roforge.UI.Elements.ContextMenu
 {
     /// <summary>
     /// Interaction logic for LogTracer.xaml

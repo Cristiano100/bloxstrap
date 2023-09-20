@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Bloxstrap
+namespace Roforge
 {
     static class Utilities
     {

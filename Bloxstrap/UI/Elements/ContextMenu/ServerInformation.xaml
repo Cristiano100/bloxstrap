@@ -1,11 +1,11 @@
-﻿<ui:UiWindow x:Class="Bloxstrap.UI.Elements.ContextMenu.ServerInformation"
+﻿<ui:UiWindow x:Class="Roforge.UI.Elements.ContextMenu.ServerInformation"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Bloxstrap.UI.Elements.ContextMenu"
+        xmlns:local="clr-namespace:Roforge.UI.Elements.ContextMenu"
         xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-        xmlns:models="clr-namespace:Bloxstrap.UI.ViewModels.ContextMenu"
+        xmlns:models="clr-namespace:Roforge.UI.ViewModels.ContextMenu"
         d:DataContext="{d:DesignInstance Type=models:ServerInformationViewModel}"
         mc:Ignorable="d"
         Title="Server information"
@@ -24,7 +24,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <ui:TitleBar Grid.Row="0" Grid.ColumnSpan="2" Padding="8" x:Name="RootTitleBar" Title="Server information" ShowMinimize="False" ShowMaximize="False" CanMaximize="False" KeyboardNavigation.TabNavigation="None" Icon="pack://application:,,,/Bloxstrap.ico" />
+        <ui:TitleBar Grid.Row="0" Grid.ColumnSpan="2" Padding="8" x:Name="RootTitleBar" Title="Server information" ShowMinimize="False" ShowMaximize="False" CanMaximize="False" KeyboardNavigation.TabNavigation="None" Icon="pack://application:,,,/Roforge.ico" />
 
         <Grid Grid.Row="1" Margin="16,8,16,16">
             <Grid.RowDefinitions>

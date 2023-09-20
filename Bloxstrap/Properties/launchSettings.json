@@ -1,25 +1,25 @@
 {
   "profiles": {
-    "Bloxstrap (Launch)": {
+    "Roforge (Launch)": {
       "commandName": "Project"
     },
-    "Bloxstrap (Quiet Launch)": {
+    "Roforge (Quiet Launch)": {
       "commandName": "Project",
       "commandLineArgs": "-quiet"
     },
-    "Bloxstrap (Uninstall)": {
+    "Roforge (Uninstall)": {
       "commandName": "Project",
       "commandLineArgs": "-uninstall"
     },
-    "Bloxstrap (Quiet Uninstall)": {
+    "Roforge (Quiet Uninstall)": {
       "commandName": "Project",
       "commandLineArgs": "-uninstall -quiet"
     },
-    "Bloxstrap (Menu)": {
+    "Roforge (Menu)": {
       "commandName": "Project",
       "commandLineArgs": "-menu"
     },
-    "Bloxstrap (Deeplink)": {
+    "Roforge (Deeplink)": {
       "commandName": "Project",
       "commandLineArgs": "roblox://experiences/start?placeId=95206881"
     }

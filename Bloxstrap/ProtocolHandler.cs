@@ -3,7 +3,7 @@ using System.Windows;
 
 using Microsoft.Win32;
 
-namespace Bloxstrap
+namespace Roforge
 {
     static class ProtocolHandler
     {

@@ -1,12 +1,12 @@
 ﻿using System.Windows.Forms;
 
-using Bloxstrap.UI.Utility;
+using Roforge.UI.Utility;
 
-namespace Bloxstrap.UI.Elements.Bootstrapper.Base
+namespace Roforge.UI.Elements.Bootstrapper.Base
 {
     public class WinFormsDialogBase : Form, IBootstrapperDialog
     {
-        public Bloxstrap.Bootstrapper? Bootstrapper { get; set; }
+        public Roforge.Bootstrapper? Bootstrapper { get; set; }
 
         private bool _isClosing;
 

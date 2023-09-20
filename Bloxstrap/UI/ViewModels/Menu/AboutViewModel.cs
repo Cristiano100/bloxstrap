@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Bloxstrap.UI.ViewModels.Menu
+namespace Roforge.UI.ViewModels.Menu
 {
     public class AboutViewModel
     {

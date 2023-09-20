@@ -1,4 +1,4 @@
-﻿namespace Bloxstrap
+﻿namespace Roforge
 {
     static class Paths
     {

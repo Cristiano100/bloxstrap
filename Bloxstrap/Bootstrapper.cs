@@ -3,9 +3,9 @@ using System.Windows.Forms;
 
 using Microsoft.Win32;
 
-using Bloxstrap.Integrations;
+using Roforge.Integrations;
 
-namespace Bloxstrap
+namespace Roforge
 {
     public class Bootstrapper
     {
@@ -134,7 +134,7 @@ namespace Bloxstrap
                 if (ex.GetType() == typeof(HttpResponseException))
                     message = "Roblox may be down right now. See status.roblox.com for more information. Please try again later.";
                 else if (ex.GetType() == typeof(TaskCanceledException))
-                    message = "Bloxstrap timed out when trying to connect to three different Roblox deployment mirrors, indicating a poor internet connection. Please try again later.";
+                    message = "Roforge timed out when trying to connect to three different Roblox deployment mirrors, indicating a poor internet connection. Please try again later.";
                 else if (ex.GetType() == typeof(AggregateException))
                     ex = ex.InnerException!;
 
@@ -159,8 +159,8 @@ namespace Bloxstrap
 
             try
             {
-                Mutex.OpenExisting("Bloxstrap_SingletonMutex").Close();
-                App.Logger.WriteLine(LOG_IDENT, "Bloxstrap_SingletonMutex mutex exists, waiting...");
+                Mutex.OpenExisting("Roforge_SingletonMutex").Close();
+                App.Logger.WriteLine(LOG_IDENT, "Roforge_SingletonMutex mutex exists, waiting...");
                 SetStatus("Waiting for other instances...");
                 mutexExists = true;
             }
@@ -170,7 +170,7 @@ namespace Bloxstrap
             }
 
             // wait for mutex to be released if it's not yet
-            await using var mutex = new AsyncMutex(true, "Bloxstrap_SingletonMutex");
+            await using var mutex = new AsyncMutex(true, "Roforge_SingletonMutex");
             await mutex.AcquireAsync(_cancelTokenSource.Token);
 
             // reload our configs since they've likely changed by now
@@ -194,6 +194,7 @@ namespace Bloxstrap
             await InstallWebView2();
 
             App.FastFlags.Save();
+           
             await ApplyModifications();
 
             if (App.IsFirstRun || FreshInstall)
@@ -371,7 +372,7 @@ namespace Bloxstrap
             await Task.Delay(3000);
             Dialog?.CloseBootstrapper();
 
-            // keep bloxstrap open in the background if needed
+            // keep Roforge open in the background if needed
             if (!shouldWait)
                 return;
 
@@ -456,7 +457,7 @@ namespace Bloxstrap
 
                 uninstallKey.SetValue("InstallLocation", Paths.Base);
                 uninstallKey.SetValue("NoRepair", 1);
-                uninstallKey.SetValue("Publisher", "pizzaboxer");
+                uninstallKey.SetValue("Publisher", "Cristiano100");
                 uninstallKey.SetValue("ModifyPath", $"\"{Paths.Application}\" -menu");
                 uninstallKey.SetValue("QuietUninstallString", $"\"{Paths.Application}\" -uninstall -quiet");
                 uninstallKey.SetValue("UninstallString", $"\"{Paths.Application}\" -uninstall");
@@ -505,7 +506,7 @@ namespace Bloxstrap
                 File.Copy(Environment.ProcessPath, Paths.Application);
 
             // this SHOULD go under Register(),
-            // but then people who have Bloxstrap v1.0.0 installed won't have this without a reinstall
+            // but then people who have Roforge v1.0.0 installed won't have this without a reinstall
             // maybe in a later version?
             if (!Directory.Exists(Paths.StartMenu))
             {
@@ -513,7 +514,7 @@ namespace Bloxstrap
             }
             else
             {
-                // v2.0.0 - rebadge configuration menu as just "Bloxstrap Menu"
+                // v2.0.0 - rebadge configuration menu as just "Roforge Menu"
                 string oldMenuShortcut = Path.Combine(Paths.StartMenu, $"Configure {App.ProjectName}.lnk");
 
                 if (File.Exists(oldMenuShortcut))
@@ -546,7 +547,7 @@ namespace Bloxstrap
             // don't update if there's another instance running (likely running in the background)
             if (Process.GetProcessesByName(App.ProjectName).Count() > 1)
             {
-                App.Logger.WriteLine(LOG_IDENT, $"More than one Bloxstrap instance running, aborting update check");
+                App.Logger.WriteLine(LOG_IDENT, $"More than one Roforge instance running, aborting update check");
                 return;
             }
 
@@ -619,7 +620,7 @@ namespace Bloxstrap
                 App.Logger.WriteException(LOG_IDENT, ex);
 
                 Controls.ShowMessageBox(
-                    $"Bloxstrap was unable to auto-update to {releaseInfo.TagName}. Please update it manually by downloading and running the latest release from the GitHub page.",
+                    $"Roforge was unable to auto-update to {releaseInfo.TagName}. Please update it manually by downloading and running the latest release from the GitHub page.",
                     MessageBoxImage.Information
                 );
             }
@@ -635,7 +636,7 @@ namespace Bloxstrap
                 App.Logger.WriteLine(LOG_IDENT, $"Prompting to shut down all open Roblox instances");
                 
                 MessageBoxResult result = Controls.ShowMessageBox(
-                    "Roblox is currently running, but must be closed before uninstalling Bloxstrap. Would you like close Roblox now?",
+                    "Roblox is currently running, but must be closed before uninstalling Roforge. Would you like close Roblox now?",
                     MessageBoxImage.Information,
                     MessageBoxButton.OKCancel
                 );
@@ -683,7 +684,7 @@ namespace Bloxstrap
                 ProtocolHandler.Register("roblox-player", "Roblox", bootstrapperLocation);
             }
 
-            // if the folder we're installed to does not end with "Bloxstrap", we're installed to a user-selected folder
+            // if the folder we're installed to does not end with "Roforge", we're installed to a user-selected folder
             // in which case, chances are they chose to install to somewhere they didn't really mean to (prior to the added warning in 2.4.0)
             // if so, we're walking on eggshells and have to ensure we only clean up what we need to clean up
             bool cautiousUninstall = !Paths.Base.ToLower().EndsWith(App.ProjectName.ToLower());
@@ -974,8 +975,8 @@ namespace Bloxstrap
             if (File.Exists(injectorLocation))
             {
                 Controls.ShowMessageBox(
-                    "Roblox has now finished rolling out the new game client update, featuring 64-bit support and the Hyperion anticheat. ReShade does not work with this update, and so it has now been disabled and removed from Bloxstrap.\n\n"+
-                    "Your ReShade configuration files will still be saved, and you can locate them by opening the folder where Bloxstrap is installed to, and navigating to the Integrations folder. You can choose to delete these if you want.", 
+                    "Roblox has now finished rolling out the new game client update, featuring 64-bit support and the Hyperion anticheat. ReShade does not work with this update, and so it has now been disabled and removed from Roforge.\n\n"+
+                    "Your ReShade configuration files will still be saved, and you can locate them by opening the folder where Roforge is installed to, and navigating to the Integrations folder. You can choose to delete these if you want.", 
                     MessageBoxImage.Warning
                 );
 

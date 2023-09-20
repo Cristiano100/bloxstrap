@@ -1,9 +1,9 @@
-﻿<ui:UiPage x:Class="Bloxstrap.UI.Elements.Menu.Pages.FastFlagsPage"
+﻿<ui:UiPage x:Class="Roforge.UI.Elements.Menu.Pages.FastFlagsPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:models="clr-namespace:Bloxstrap.UI.ViewModels"
+      xmlns:models="clr-namespace:Roforge.UI.ViewModels"
       xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
       mc:Ignorable="d"
       d:DesignHeight="1000" d:DesignWidth="800"
@@ -26,7 +26,7 @@
         </StackPanel>
       </ui:CardAction>
 
-      <ui:CardAction Grid.Column="1" Margin="4,0,0,0" Icon="BookQuestionMark24" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags">
+      <ui:CardAction Grid.Column="1" Margin="4,0,0,0" Icon="BookQuestionMark24" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags">
         <StackPanel>
           <TextBlock FontSize="14" Text="Help" />
           <TextBlock Margin="0,2,0,0" FontSize="12" Text="Learn more about FastFlags." Padding="0,0,16,0"  Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
@@ -68,7 +68,7 @@
     <TextBlock Text="Presets" FontSize="16" FontWeight="Medium" Margin="0,16,0,0" />
     <TextBlock Foreground="{DynamicResource TextFillColorSecondaryBrush}">
       FastFlag preset for Direct3D
-      <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#exclusive-fullscreen">exclusive fullscreen</Hyperlink>
+      <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#exclusive-fullscreen">exclusive fullscreen</Hyperlink>
       using Alt+Enter is already enabled by default.
     </TextBlock>
     <ui:CardControl Margin="0,8,0,0">
@@ -81,7 +81,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" FontSize="14" Text="Framerate limit" />
             <TextBlock Grid.Column="1" Margin="4,0,0,0">              
-              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#framerate-limit">
+              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#framerate-limit">
                 <ui:SymbolIcon Symbol="QuestionCircle48" Margin="0,1,0,0" />
               </Hyperlink>
             </TextBlock>
@@ -110,7 +110,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" FontSize="14" Text="Preferred escape menu version" />
             <TextBlock Grid.Column="1" Margin="4,0,0,0">
-              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#escape-menu-version">
+              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#escape-menu-version">
                 <ui:SymbolIcon Symbol="QuestionCircle48" Margin="0,1,0,0" />
               </Hyperlink>
             </TextBlock>
@@ -130,13 +130,13 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" FontSize="14" Text="Enable ability to hide GUIs" />
             <TextBlock Grid.Column="1" Margin="4,0,0,0">
-              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#gui-hiding">
+              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#gui-hiding">
                 <ui:SymbolIcon Symbol="QuestionCircle48" Margin="0,1,0,0" />
               </Hyperlink>
             </TextBlock>
           </Grid>
           <TextBlock Margin="0,2,0,0" FontSize="12" Foreground="{DynamicResource TextFillColorTertiaryBrush}">
-            Toggled with <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#gui-hiding">keyboard shortcuts</Hyperlink>. Only works if you're in the <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://www.roblox.com/groups/32380007/Bloxstrap">Bloxstrap group</Hyperlink>.
+            Toggled with <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#gui-hiding">keyboard shortcuts</Hyperlink>. Only works if you're in the <Hyperlink Foreground="{DynamicResource TextFillColorPrimaryBrush}" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://www.roblox.com/groups/32380007/Bloxstrap">Bloxstrap group</Hyperlink>.
           </TextBlock>
         </StackPanel>
       </ui:CardControl.Header>
@@ -152,7 +152,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" FontSize="14" Text="Use old material textures" />
             <TextBlock Grid.Column="1" Margin="4,0,0,0">
-              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#old-material-textures">
+              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#old-material-textures">
                 <ui:SymbolIcon Symbol="QuestionCircle48" Margin="0,1,0,0" />
               </Hyperlink>
             </TextBlock>
@@ -181,7 +181,7 @@
             </Grid.ColumnDefinitions>
             <TextBlock Grid.Column="0" FontSize="14" Text="Preserve rendering quality with display scaling" />
             <TextBlock Grid.Column="1" Margin="4,0,0,0">
-              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/bloxstrap/wiki/A-guide-to-FastFlags#dpi-scaling-fixes">
+              <Hyperlink TextDecorations="None" ToolTip="More information on this preset" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/pizzaboxer/Bloxstrap/wiki/A-guide-to-FastFlags#dpi-scaling-fixes">
                 <ui:SymbolIcon Symbol="QuestionCircle48" Margin="0,1,0,0" />
               </Hyperlink>
             </TextBlock>

@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace Bloxstrap.Extensions
+namespace Roforge.Extensions
 {
     static class BootstrapperIconEx
     {
@@ -27,12 +27,12 @@ namespace Bloxstrap.Extensions
                     App.Logger.WriteException(LOG_IDENT, ex);
                 }
 
-                return customIcon ?? Properties.Resources.IconBloxstrap;
+                return customIcon ?? Properties.Resources.IconRoforge;
             }
 
             return icon switch
             {
-                BootstrapperIcon.IconBloxstrap => Properties.Resources.IconBloxstrap,
+                BootstrapperIcon.IconRoforge => Properties.Resources.IconRoforge,
                 BootstrapperIcon.Icon2008 => Properties.Resources.Icon2008,
                 BootstrapperIcon.Icon2011 => Properties.Resources.Icon2011,
                 BootstrapperIcon.IconEarly2015 => Properties.Resources.IconEarly2015,
@@ -40,7 +40,7 @@ namespace Bloxstrap.Extensions
                 BootstrapperIcon.Icon2017 => Properties.Resources.Icon2017,
                 BootstrapperIcon.Icon2019 => Properties.Resources.Icon2019,
                 BootstrapperIcon.Icon2022 => Properties.Resources.Icon2022,
-                _ => Properties.Resources.IconBloxstrap
+                _ => Properties.Resources.IconRoforge
             };
         }
     }

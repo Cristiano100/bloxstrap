@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-namespace Bloxstrap.UI.Utility
+namespace Roforge.UI.Utility
 {
     static class Rendering
     {

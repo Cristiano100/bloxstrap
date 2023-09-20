@@ -1,6 +1,6 @@
 ﻿using DiscordRPC;
 
-namespace Bloxstrap.Integrations
+namespace Roforge.Integrations
 {
     public class DiscordRichPresence : IDisposable
     {
@@ -67,13 +67,13 @@ namespace Bloxstrap.Integrations
                 return;
             }
 
-            Models.BloxstrapRPC.RichPresence? presenceData;
+            Models.RoforgeRPC.RichPresence? presenceData;
             
             // a lot of repeated code here, could this somehow be cleaned up?
 
             try
             {
-                presenceData = message.Data.Deserialize<Models.BloxstrapRPC.RichPresence>();
+                presenceData = message.Data.Deserialize<Models.RoforgeRPC.RichPresence>();
             }
             catch (Exception)
             {
@@ -279,7 +279,7 @@ namespace Bloxstrap.Integrations
                 }
             };
 
-            // this is used for configuration from BloxstrapRPC
+            // this is used for configuration from RoforgeRPC
             _currentPresenceCopy = _currentPresence.Clone();
 
             if (_stashedRPCMessage is not null)
