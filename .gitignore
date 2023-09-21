@@ -351,3 +351,6 @@ MigrationBackup/
 
 # Build folder
 build/
+
+# Manifests folder
+manifests/
