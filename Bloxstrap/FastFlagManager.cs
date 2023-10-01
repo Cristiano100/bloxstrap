@@ -14,6 +14,8 @@ namespace Roforge
 
         public static IReadOnlyDictionary<string, string> PresetFlags = new Dictionary<string, string>
         {
+            { "Physics.InfiniteJump", "DFIntFreeFallFloorSearchDistanceIncreaseVelocity" },
+
             { "Network.Log", "FLogNetwork" },
             
             { "HTTP.Log", "DFLogHttpTraceLight" },

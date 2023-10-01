@@ -88,6 +88,12 @@ namespace Roforge.UI.ViewModels.Menu
             set => App.FastFlags.SetPreset("UI.Menu.InGameChrome", value ? "True" : null);
         }
 
+        public bool InfiniteJump
+        {
+            get => App.FastFlags.GetPreset("Physics.InfiniteJump") == "1";
+            set => App.FastFlags.SetPreset("Physics.InfiniteJump", value ? "1" : null);
+        }
+
         public bool DynamicHeadsDisabled
         {
             get => App.FastFlags.GetPreset("Rendering.DisableDynamicHeads") == "False";
