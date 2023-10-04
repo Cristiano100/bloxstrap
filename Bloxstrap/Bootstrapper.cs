@@ -307,9 +307,15 @@ namespace Roforge
             // whether we should wait for roblox to exit to handle stuff in the background or clean up after roblox closes
             bool shouldWait = false;
 
-            // v2.2.0 - byfron will trip if we keep a process handle open for over a minute, so we're doing this now
+            var startInfo = new ProcessStartInfo()
+            { 
+                FileName = _playerLocation,
+                Arguments = _launchCommandLine,
+                WorkingDirectory = _versionFolder,
+            };
+            
             int gameClientPid;
-            using (Process gameClient = Process.Start(_playerLocation, _launchCommandLine))
+            using (Process gameClient = Process.Start(startInfo)!)
             {
                 gameClientPid = gameClient.Id;
             }
@@ -498,12 +504,16 @@ namespace Roforge
             ProtocolHandler.Register("roblox-player", "Roblox", Paths.Application);
 
             // in case the user is reinstalling
-            if (File.Exists(Paths.Application) && App.IsFirstRun)
-                File.Delete(Paths.Application);
-
-            // check to make sure bootstrapper is in the install folder
-            if (!File.Exists(Paths.Application) && Environment.ProcessPath is not null)
-                File.Copy(Environment.ProcessPath, Paths.Application);
+            if (Environment.ProcessPath is not null && Environment.ProcessPath != Paths.Application)
+            {
+                if (File.Exists(Paths.Application) && App.IsFirstRun)
+                {
+                    Filesystem.AssertReadOnly(Paths.Application);
+                    File.Delete(Paths.Application);
+                }
+                if (!File.Exists(Paths.Application))
+                    File.Copy(Environment.ProcessPath, Paths.Application);
+            }
 
             // this SHOULD go under Register(),
             // but then people who have Roforge v1.0.0 installed won't have this without a reinstall

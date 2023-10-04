@@ -24,7 +24,7 @@ namespace Roforge.Utility
         {
             var fileInfo = new FileInfo(filePath);
 
-            if (!fileInfo.IsReadOnly)
+            if (!fileInfo.Exists || !fileInfo.IsReadOnly)
                 return;
 
             fileInfo.IsReadOnly = false;

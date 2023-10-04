@@ -96,7 +96,7 @@
                     <TextBlock Margin="0,2,0,0" FontSize="12" Text="MIT License" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
                 </StackPanel>
             </ui:CardAction>
-            <ui:CardAction Grid.Row="0" Grid.Column="1" Margin="0,8,8,0" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/cristiano100/roforge/blob/main/LICENSE.Roforge">
+            <ui:CardAction Grid.Row="0" Grid.Column="1" Margin="0,8,8,0" Command="models:GlobalViewModel.OpenWebpageCommand" CommandParameter="https://github.com/cristiano100/roforge/blob/main/LICENSE.Bloxstrap">
                 <StackPanel>
                     <TextBlock FontSize="14" Text="Bloxstrap by pizzaboxer" />
                     <TextBlock Margin="0,2,0,0" FontSize="12" Text="MIT License" Foreground="{DynamicResource TextFillColorTertiaryBrush}" />
